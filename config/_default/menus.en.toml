@@ -1,0 +1,37 @@
+
+################### English Navigation ########################
+[[main]]
+name = "About"
+url = "#about"
+weight = 1
+
+[[main]]
+name = "Services"
+url = "#services"
+weight = 2
+
+[[main]]
+name = "Portfolio"
+url = "#portfolio"
+weight = 3
+
+[[main]]
+name = "Team"
+url = "#team"
+weight = 4
+
+[[main]]
+name = "Pricing"
+url = "#pricing"
+weight = 5
+
+[[main]]
+name = "Blog"
+url = "#blog"
+weight = 6
+
+[[main]]
+name = "Contact"
+url = "#contact"
+weight = 7
+
