@@ -21,17 +21,12 @@ url = "#team"
 weight = 4
 
 [[main]]
-name = "Pricing"
-url = "#pricing"
-weight = 5
-
-[[main]]
 name = "Blog"
 url = "#blog"
-weight = 6
+weight = 5
 
 [[main]]
 name = "Contact"
 url = "#contact"
-weight = 7
+weight = 6
 
