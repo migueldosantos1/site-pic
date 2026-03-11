@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "http://web.tecnico.ulisboa.pt/ist1109854/meghna-hugo/"
+baseURL = "http://web.tecnico.ulisboa.pt/ist1109854/"
 title = "InVision"
 theme = "meghna-hugo"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
@@ -93,7 +93,7 @@ link = "plugins/google-map/map.js"
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/logo_resized.png"
+logo = "images/InVision_resized.png"
 # Meta data
 description = "Responsive Multipurpose Parallax Hugo Template"
 author = "Themefisher"
@@ -105,7 +105,7 @@ post_share = true
 # preloader
 [params.preloader]
 enable = false
-preloader = "images/logo_resized.png"
+preloader = "images/InVision_resized.png"
 
 # cookies
 [params.cookies]
