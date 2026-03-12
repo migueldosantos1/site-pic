@@ -93,7 +93,7 @@ link = "plugins/google-map/map.js"
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/InVision_resized.png"
+logo = ""
 # Meta data
 description = "Responsive Multipurpose Parallax Hugo Template"
 author = "Themefisher"
@@ -105,7 +105,7 @@ post_share = true
 # preloader
 [params.preloader]
 enable = false
-preloader = "images/InVision_resized.png"
+preloader = ""
 
 # cookies
 [params.cookies]
