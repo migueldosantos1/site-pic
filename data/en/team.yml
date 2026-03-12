@@ -11,7 +11,7 @@ team:
       content : Developed the needed software for the prototype while ensuring the website.
       social :
         - icon : ti-linkedin # themify icon pack : https://themify.me/themify-icons
-          link : "www.linkedin.com/in/miguel-hipólito-dos-santos-31a8b6237"
+          link : "https://www.linkedin.com/in/miguel-hipólito-dos-santos-31a8b6237"
         
     # team member loop
     - name : Ricardo Lourenço
