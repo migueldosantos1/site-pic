@@ -1,72 +1,207 @@
 {{ $data := index site.Data site.Language.Lang }}
-
 {{ if $data.portfolio.portfolio.enable }}
 {{ with $data.portfolio.portfolio }}
-{{"<!-- Portfolio Section -->" | safeHTML}}
+{{"<!-- Portfolio / Technological Solution Section -->" | safeHTML}}
 <section class="portfolio section" id="portfolio">
-	<div class="container">
-		<div class="row ">
-			<div class="col-xl-12">
-				{{"<!-- section title -->" | safeHTML}}
-				<div class="title text-center">
-					<h2>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
-						{{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h2>
-					<div class="border-meghna"></div>
-				</div>
-				{{"<!-- /section title -->" | safeHTML}}
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="btn-group portfolio-filter btn-group-toggle justify-content-center d-flex flex-wrap"
-					data-toggle="buttons">
-					<label class="btn active">
-						<input type="radio" name="shuffle-filter" value="all" checked="checked" />{{ i18n "all"}}
-					</label>
-					{{ $categories := slice }}
-					{{ range .portfolio_item }}
-					{{ range .categories }}
-					{{ $categories = $categories | append . }}
-					{{ end }}
-					{{ end }}
-					{{ range ( $categories | uniq ) }}
-					<label class="btn">
-						<input type="radio" name="shuffle-filter" value="{{ . | urlize }}" />{{ . | humanize }}
-					</label>
-					{{ end }}
-				</div>
-			</div>
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="title text-center">
+          <h2>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+            {{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h2>
+          <div class="border-meghna"></div>
+        </div>
+      </div>
+    </div>
 
-		<div class="row shuffle-wrapper justify-content-center">
-			{{"<!-- portfolio item -->" | safeHTML}}
-			{{ range .portfolio_item }}
-			<div class="col-lg-4 col-md-6 shuffle-item"
-				data-groups="[{{range $index, $element:= .categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]">
-				<div class="portfolio-block mb-4">
-					{{ partial "image.html" (dict "Src" .image_webp "Alt" .name "Class" "img-fluid") }}
-					<div class="caption">
-						{{ partial "process-image.html" (dict "Src" .image) }}
+    <!-- Intro description -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <p class="solution-intro">
+          InVision uses AI-powered smart glasses, and voice-guided navigation to help visually impaired individuals navigate complex indoor environments — independently and confidently.
+        </p>
+      </div>
+    </div>
 
-						<a class="search-icon image-popup" data-effect="mfp-with-zoom" href="{{ .image | relURL }}"
-							data-lightbox="image-1">
-							<i class="ti-search"></i>
-						</a>
-						<h4 class="mt-3">
-							{{ if or (eq .link "#") (eq .link "") }}
-							{{ .name }}
-							{{ else }}
-							<a href="{{ .link | safeURL }}">{{ .name }}</a>
-							{{ end }}
-						</h4>
-						<p>{{ .content | markdownify }}</p>
-					</div>
-				</div>
-			</div>
-			{{ end }}
-		</div>
-	</div>
+    <!-- Main split layout: image left, accordion right -->
+    <div class="row align-items-center solution-main-row">
+      <div class="col-lg-6">
+        <div class="solution-visual-card">
+          <div class="solution-icon-wrap">
+            <!-- SVG: glasses with signal waves -->
+            <svg viewBox="0 0 260 180" xmlns="http://www.w3.org/2000/svg" class="solution-svg">
+              <!-- Signal waves top -->
+              <path d="M100 55 Q130 35 160 55" fill="none" stroke="#ce9d24" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+              <path d="M85 42 Q130 18 175 42" fill="none" stroke="#ce9d24" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+              <path d="M70 28 Q130 0 190 28" fill="none" stroke="#ce9d24" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+              <!-- Glasses frame -->
+              <rect x="30" y="80" width="80" height="50" rx="18" fill="none" stroke="#2c3e50" stroke-width="4"/>
+              <rect x="150" y="80" width="80" height="50" rx="18" fill="none" stroke="#2c3e50" stroke-width="4"/>
+              <!-- Bridge -->
+              <path d="M110 105 Q130 95 150 105" fill="none" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+              <!-- Temples (arms) -->
+              <line x1="30" y1="105" x2="5" y2="105" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+              <line x1="230" y1="105" x2="255" y2="105" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+              <!-- Lens tint -->
+              <rect x="33" y="83" width="74" height="44" rx="15" fill="#57cbcc" opacity="0.18"/>
+              <rect x="153" y="83" width="74" height="44" rx="15" fill="#57cbcc" opacity="0.18"/>
+              <!-- AI chip dot on right lens -->
+              <circle cx="190" cy="105" r="6" fill="#ce9d24" opacity="0.85"/>
+              <circle cx="190" cy="105" r="3" fill="#fff" opacity="0.9"/>
+              <!-- Subtitle -->
+              <text x="130" y="158" text-anchor="middle" font-size="12" fill="#888" font-family="sans-serif" letter-spacing="1">REQUEST · AI · DIRECTIONS</text>
+            </svg>
+          </div>
+          <p class="solution-visual-label">Smart Glasses with AI Vision</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="solution-accordion" id="solutionAccordion">
+
+          <!-- Item 1 -->
+          <div class="solution-item active" id="sol-1">
+            <div class="solution-item-header" onclick="toggleSolution('sol-1')">
+              <div class="solution-item-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <circle cx="11" cy="11" r="9" stroke="#57cbcc" stroke-width="2"/>
+                  <path d="M7 11 Q11 6 15 11 Q11 16 7 11Z" fill="#57cbcc" opacity="0.7"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="solution-item-title">AI Vision &amp; Object Detection</h4>
+                <span class="solution-item-tag">Core Technology</span>
+              </div>
+              <span class="solution-chevron">&#8250;</span>
+            </div>
+            <div class="solution-item-body">
+              <p>The glasses capture real-time images and send them to our AI model that identifies points of interest — stairs, elevators, exits, bathrooms — and communicates directions to the user via voice in under a second.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="solution-item" id="sol-2">
+            <div class="solution-item-header" onclick="toggleSolution('sol-2')">
+              <div class="solution-item-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <rect x="7" y="3" width="8" height="16" rx="2" stroke="#57cbcc" stroke-width="2"/>
+                  <line x1="9" y1="17" x2="13" y2="17" stroke="#57cbcc" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="solution-item-title">Voice-Guided Navigation</h4>
+                <span class="solution-item-tag">Accessibility</span>
+              </div>
+              <span class="solution-chevron">&#8250;</span>
+            </div>
+            <div class="solution-item-body">
+              <p>Step-by-step audio instructions guide the user to their chosen destination. The user simply asks — "Where are the stairs?" — and InVision responds with clear, natural-language directions.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="solution-item" id="sol-3">
+            <div class="solution-item-header" onclick="toggleSolution('sol-3')">
+              <div class="solution-item-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M4 17 L11 5 L18 17 Z" stroke="#57cbcc" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                  <line x1="11" y1="10" x2="11" y2="14" stroke="#57cbcc" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="11" cy="15.5" r="0.8" fill="#57cbcc"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="solution-item-title">Infrastructure Mapping</h4>
+                <span class="solution-item-tag">Setup</span>
+              </div>
+              <span class="solution-chevron">&#8250;</span>
+            </div>
+            <div class="solution-item-body">
+              <p>InVision works in universities, hospitals, libraries, and public buildings.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- How it works: 3-step flow -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-12 text-center mb-4">
+        <h3 class="how-it-works-title">How it works</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center solution-steps-row">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="solution-step">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="15" stroke="#57cbcc" stroke-width="2" fill="none"/>
+              <path d="M12 18 Q18 10 24 18 Q18 26 12 18Z" fill="#57cbcc" opacity="0.6"/>
+            </svg>
+          </div>
+          <h5>User asks</h5>
+          <p>The user asks for directions to get to a destination — "Take me to the elevator" — to the InVision glasses.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-1 d-none d-lg-flex align-items-center justify-content-center">
+        <div class="step-arrow">&#8594;</div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="solution-step">
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <rect x="4" y="8" width="28" height="20" rx="4" stroke="#ce9d24" stroke-width="2" fill="none"/>
+              <circle cx="18" cy="18" r="5" stroke="#ce9d24" stroke-width="2" fill="none"/>
+              <circle cx="18" cy="18" r="2" fill="#ce9d24"/>
+            </svg>
+          </div>
+          <h5>AI sees &amp; analyses</h5>
+          <p>The camera captures the environment. AI identifies the surroundings and analyzes the best path.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-1 d-none d-lg-flex align-items-center justify-content-center">
+        <div class="step-arrow">&#8594;</div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="solution-step">
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M10 28 L10 16 Q10 8 18 8 Q26 8 26 16 L26 28" stroke="#57cbcc" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M14 28 Q14 32 18 32 Q22 32 22 28" stroke="#57cbcc" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h5>Voice guidance</h5>
+          <p>Clear audio instructions guide the user step by step to their destination, hands-free.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
+
+<script>
+function toggleSolution(id) {
+    var items = document.querySelectorAll('.solution-item');
+    items.forEach(function(item) {
+        if (item.id === id) {
+            item.classList.toggle('active');
+        }
+        else {
+            item.classList.remove('active');
+        }
+    });
+}
+</script>
+
 {{"<!-- /Portfolio -->" | safeHTML}}
 {{ end }}
 {{ end }}

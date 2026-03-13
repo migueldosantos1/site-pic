@@ -1,14 +1,14 @@
 ############################### team ############################
 team:
   enable : true
-  title : Our Team
+  title : Meet Our Team
   team_member :
     # team member loop
     - name : Miguel dos Santos
       image_webp : images/team/foto_miguel.webp
       image : images/team/foto_miguel.jpg
       designation : Software & Website Developer
-      content : Developed the needed software for the prototype while ensuring the website.
+      content : Developed the needed software for the prototype while ensuring the needed software for the website development.
       social :
         - icon : ti-linkedin # themify icon pack : https://themify.me/themify-icons
           link : "https://www.linkedin.com/in/miguel-hipólito-dos-santos-31a8b6237"
@@ -16,7 +16,7 @@ team:
     # team member loop
     - name : Ricardo Lourenço
       image_webp : images/team/foto_plancha.webp
-      image : images/team/foto_plancha.jpg
+      image : images/team/foto_plancha.jpeg
       designation : Software & Partnerships
       content : Developed the needed software for the prototype while ensuring external collaborations and partnerships.
       social :
@@ -28,15 +28,15 @@ team:
       image_webp : images/team/foto_vilhena.webp
       image : images/team/foto_vilhena.jpg
       designation : Hardware & Partnerships
-      content : Developed the neede harware for the prototype while ensuring external collaborations and partnerships.
+      content : Developed the needed harware for the prototype while ensuring external collaborations and partnerships.
       social :
         - icon : ti-linkedin # themify icon pack : https://themify.me/themify-icons
-          link : "#"
+          link : "https://www.linkedin.com/in/pedro-vilhena05/"
         
     # team member loop
     - name : Alberto Leitão
       image_webp : images/team/foto_alberto.webp
-      image : images/team/foto_alberto.jpg
+      image : images/team/foto_alberto.jpeg
       designation : Software & Partnerships
       content : Developed the needed software for the prototype while ensuring external collaborations and partnerships.
       social :
@@ -46,9 +46,9 @@ team:
     # team member loop
     - name : Iderley Costa
       image_webp : images/team/foto_iderley.webp
-      image : images/team/foto_iderley.jpg
+      image : images/team/foto_iderley.jpeg
       designation : Hardware & Partnerships
-      content : Developed the neede harware for the prototype while ensuring external collaborations and partnerships.
+      content : Developed the needed harware for the prototype while ensuring external collaborations and partnerships.
       social :
         - icon : ti-linkedin # themify icon pack : https://themify.me/themify-icons
           link : "#"

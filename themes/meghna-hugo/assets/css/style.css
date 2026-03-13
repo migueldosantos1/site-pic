@@ -137,7 +137,7 @@ a:hover {
   position: absolute;
   top: -4px;
   width: 50px;
-  background-color: #57cbcc;
+  background-color: #ce9d24;
 }
 
 .color {
@@ -882,96 +882,208 @@ a:hover {
 }
 
 /*=================================================================
-  Portfolio section
+  Technological Solution
 ==================================================================*/
-.portfolio-filter {
-  margin-bottom: 40px;
-  text-align: center;
-}
 
-.portfolio-filter .btn {
-  outline: 0;
-  border: 1px solid rgba(236, 239, 241, 0.07);
-  background: transparent;
-  display: inline-block;
+/* Intro paragraph */
+.solution-intro {
+  color: #4B5563;
   font-size: 16px;
-  padding: 6px 20px;
-  font-weight: 700;
-  color: #737f8a;
-  transition: .3s all;
+  line-height: 1.75;
+  margin-bottom: 50px;
 }
 
-.portfolio-filter .btn.active {
-  border-color: #57cbcc;
+.solution-main-row {
+  margin-bottom: 60px;
 }
 
-.portfolio-block {
-  position: relative;
+.solution-visual-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 40px 30px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
 }
-
-.portfolio-block:before {
-  transition: all 0.3s ease-in-out;
-  background: white;
-  opacity: 0;
-  top: 20px;
-  right: 20px;
-  bottom: 20px;
-  left: 20px;
-  position: absolute;
-  content: '';
+.solution-visual-card:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
-
-.portfolio-block img {
+.solution-icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.solution-svg {
   width: 100%;
+  max-width: 260px;
   height: auto;
 }
-
-.portfolio-block:hover:before {
-  opacity: 1;
+.solution-visual-label {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-.portfolio-block:hover .caption h4 {
-  top: 45%;
+.solution-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.portfolio-block:hover .caption {
-  opacity: 1;
-  top: 55%;
+.solution-item {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  overflow: hidden;
+  border: 1.5px solid transparent;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.solution-item.active {
+  border-color: #57cbcc;
+  box-shadow: 0 6px 20px rgba(87, 203, 204, 0.15);
 }
 
-.portfolio-block .caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 9;
-  transition: all 0.2s ease-in-out;
-  text-align: center;
+.solution-item-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+}
+.solution-item-header:hover {
+  background: #f8fdfd;
 }
 
-.portfolio-block .caption h4 {
-  font-size: 16px;
+.solution-item-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: #f0fbfb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solution-item-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 3px;
+}
+.solution-item-tag {
+  font-size: 11px;
+  color: #ce9d24;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   font-weight: 600;
 }
 
-.portfolio-block .caption h4 a {
-  color: #555;
+.solution-chevron {
+  margin-left: auto;
+  font-size: 22px;
+  color: #57cbcc;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+.solution-item.active .solution-chevron {
+  transform: rotate(90deg);
 }
 
-.portfolio-block .caption .search-icon {
-  background: #57cbcc;
-  width: 50px;
-  height: 50px;
-  color: #fff;
-  display: inline-block;
-  font-size: 20px;
-  border-radius: 30px;
+.solution-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s ease;
+  padding: 0 20px;
+}
+.solution-item-body p {
+  font-size: 14px;
+  color: #4B5563;
+  line-height: 1.65;
+  margin: 0 0 16px;
+}
+.solution-item.active .solution-item-body {
+  max-height: 200px;
+  padding: 4px 20px 16px;
 }
 
-.portfolio-block .caption .search-icon i {
-  line-height: 50px;
+.how-it-works-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.solution-steps-row {
+  margin-bottom: 20px;
+}
+
+.solution-step {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  margin-bottom: 24px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.solution-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.step-number {
+  font-size: 40px;
+  font-weight: 800;
+  color: #57cbcc;
+  opacity: 0.18;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  line-height: 1;
+}
+
+.step-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.solution-step h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+.solution-step p {
+  font-size: 13px;
+  color: #4B5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.step-arrow {
+  font-size: 28px;
+  color: #57cbcc;
+  opacity: 0.5;
+}
+
+#portfolio .title h2 {
+  color: #000000;
+}
+#portfolio .title h2 .color {
+  color: #000000;
+}
+
+@media (max-width: 991px) {
+  .solution-visual-card {
+    margin-bottom: 40px;
+  }
 }
 
 /*=================================================================
@@ -1052,6 +1164,7 @@ a:hover {
 .member-photo {
   overflow: hidden;
   position: relative;
+  height: 300px;
 }
 
 @media (max-width: 768px) {
@@ -1066,10 +1179,12 @@ a:hover {
 }
 
 .member-photo img {
-  transition: all 0.4s ease 0s;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 15% !important;
   display: block;
-  width: 100%;
-  height: auto;
+  transition: all 0.4s ease 0s;
 }
 
 @media (max-width: 768px) {
@@ -1131,9 +1246,17 @@ a:hover {
   padding: 15px;
 }
 
+#team .title h2 {
+  color: #000000;
+}
+
+#team .title h2 .color {
+  color: #000000;
+}
+
 .member-meta h4 {
   margin: 0 0 5px;
-  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+  color: #4B5563;
   font-weight: 500;
 }
 
@@ -1143,7 +1266,7 @@ a:hover {
 }
 
 .member-meta p {
-  color: #rgb(55 65 81 / var(--tw-text-opacity, 1));
+  color: #4B5563;;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 0;
