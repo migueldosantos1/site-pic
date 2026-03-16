@@ -1,8 +1,8 @@
 ############################### Banner ################################
 banner:
   enable : true
-  bg_image_webp : "images/backgrounds/brighter_background.webp"
-  bg_image : "images/backgrounds/brighter_background.jpg"
+  bg_image_webp : "images/backgrounds/background.webp"
+  bg_image : "images/backgrounds/background.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "InVision"
   content : "Empowering visually impaired individuals with real-time navigation indoors."

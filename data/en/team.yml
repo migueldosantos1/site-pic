@@ -56,7 +56,7 @@ team:
       # team member loop
     - name : José Santos
       image_webp : images/team/foto_jose.webp
-      image : images/team/foto_jose.jpg
+      image : images/team/foto_jose.png
       designation : Hardware & Software
       content : Developed the needed hardware and software for the prototype.
       social :
