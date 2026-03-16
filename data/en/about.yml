@@ -1,16 +1,16 @@
 ############################# About ###################################
 about:
   enable : true
-  title : About Us
+  title : Sobre Nós
   about_item :
-  - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : We're Creative
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+  - icon : ti-user # Ícone de utilizador/estudante
+    title : Estudantes do Técnico
+    content : Somos finalistas de licenciatura no Instituto Superior Técnico (IST). Este projeto nasceu da nossa vontade de aliar os conhecimentos de engenharia e Inteligência Artificial a uma causa com verdadeiro impacto na sociedade.
 
-  - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
-    title : We're Professional
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+  - icon : ti-pie-chart # Ícone de estatística/gráfico
+    title : A Realidade em Portugal
+    content : Estima-se que existam cerca de 160.000 pessoas com deficiência visual no nosso país, das quais mais de 25.000 são totalmente cegas. Estes números mostram a urgência de criar soluções tecnológicas de apoio à mobilidade.
 
-  - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-    title : We're Genius
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+  - icon : ti-target # Ícone de alvo/missão
+    title : O Nosso Objetivo
+    content : O nosso projeto final não é apenas académico. Queremos desenvolver uns óculos inteligentes, confortáveis e acessíveis que promovam a autonomia, a inclusão e a qualidade de vida de quem mais precisa.

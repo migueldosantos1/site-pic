@@ -576,95 +576,58 @@ a:hover {
 }
 
 /*=================================================================
-  About us section
+  About us section (Modern & Clean AI Theme)
 ==================================================================*/
 .about .block {
-  background: #242930;
-  padding: 30px;
-  border-bottom: 2px solid transparent;
-  transition: .5s all;
-  margin-bottom: 20px;
+  background: #1e2228; /* Um tom ligeiramente mais moderno e escuro */
+  padding: 40px 30px;
+  border-radius: 16px; /* Cantos arredondados modernos */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Borda muito subtil */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito "mola" suave */
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .about .block:hover {
-  border-bottom: 2px solid #57cbcc;
-}
-
-.about .block:hover .icon-box {
-  -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
+  border-color: rgba(87, 203, 204, 0.5); /* Borda fica ciano */
+  box-shadow: 0 15px 40px rgba(87, 203, 204, 0.15); /* Brilho tech */
 }
 
 .about .block .icon-box {
-  position: relative;
-  width: 160px;
-  height: 92.38px;
-  background-color: transparent;
-  margin: 46.19px auto 60px;
-  padding: 20px 0;
-  border-left: 2px solid rgba(236, 239, 241, 0.07);
-  border-right: 2px solid rgba(236, 239, 241, 0.07);
-  font-size: 50px;
-  -webkit-transform: translateZ(0px);
-  transform: translateZ(0px);
-  transition-duration: 0.3s;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-}
-
-.about .block .icon-box:after,
-.about .block .icon-box:before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 113.14px;
-  height: 113.14px;
-  background-color: inherit;
-  left: 20.4315px;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-}
-
-.about .block .icon-box:before {
-  top: -56.5685px;
-  border-top: 2px solid rgba(236, 239, 241, 0.07);
-  border-right: 2px solid rgba(236, 239, 241, 0.07);
-}
-
-.about .block .icon-box:after {
-  bottom: -56.5685px;
-  border-bottom: 2px solid rgba(236, 239, 241, 0.07);
-  border-left: 2px solid rgba(236, 239, 241, 0.07);
-}
-
-.about .block .icon-box h3 {
-  color: #afbac4;
-}
-
-/*=================================================================
-  About us 2 section
-==================================================================*/
-.about-2 .content-block {
-  padding: 40px;
-}
-
-.about-2 .content-block .media {
-  margin-top: 25px;
-}
-
-.about-2 .content-block .media .pull-left {
-  padding-right: 15px;
-}
-
-.about-2 .content-block .media i {
-  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+  background: rgba(87, 203, 204, 0.1); /* Fundo ciano transparente */
+  border-radius: 50%; /* Círculo perfeito */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
   color: #57cbcc;
+  transition: all 0.3s ease;
 }
 
-.about-2 .content-block .media h4 {
-  font-size: 16px;
+.about .block:hover .icon-box {
+  background: #57cbcc;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(87, 203, 204, 0.5); /* Efeito luz no ícone */
+  transform: scale(1.1); /* Ícone cresce ligeiramente */
+}
+
+.about .block .content h3 {
+  color: #fff;
   font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.about .block .content p {
+  color: #afbac4;
+  line-height: 1.7;
+  font-size: 15px;
+  margin: 0;
 }
 
 /*=================================================================
