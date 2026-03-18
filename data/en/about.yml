@@ -1,10 +1,10 @@
 ############################# About ###################################
 about:
   enable : true
-  title : Sobre Nós
+  title : About Us
   about_item :
   - icon : ti-user # Ícone de utilizador/estudante
-    title : Estudantes do Técnico
+    title : Engineer Students
     content : Somos finalistas de licenciatura no Instituto Superior Técnico (IST). Este projeto nasceu da nossa vontade de aliar os conhecimentos de engenharia e Inteligência Artificial a uma causa com verdadeiro impacto na sociedade.
 
   - icon : ti-pie-chart # Ícone de estatística/gráfico

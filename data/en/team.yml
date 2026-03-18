@@ -28,7 +28,7 @@ team:
       image_webp : images/team/foto_vilhena.webp
       image : images/team/foto_vilhena.jpg
       designation : Hardware & Partnerships
-      content : Developed the needed harware for the prototype while ensuring external collaborations and partnerships.
+      content : Developed the needed hardware for the prototype while ensuring external collaborations and partnerships.
       social :
         - icon : ti-linkedin # themify icon pack : https://themify.me/themify-icons
           link : "https://www.linkedin.com/in/pedro-vilhena05/"
@@ -48,7 +48,7 @@ team:
       image_webp : images/team/foto_iderley.webp
       image : images/team/foto_iderley.jpeg
       designation : Hardware & Partnerships
-      content : Developed the needed harware for the prototype while ensuring external collaborations and partnerships.
+      content : Developed the needed hardware for the prototype while ensuring external collaborations and partnerships.
       social :
         - icon : ti-linkedin # themify icon pack : https://themify.me/themify-icons
           link : "#"
