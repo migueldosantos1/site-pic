@@ -14,14 +14,12 @@
   translation: All
 - id: about
   translation: About Us
-- id: services
-  translation: Service
 - id: portfolio
   translation: Portfolio
 - id: team
   translation: Team
-- id: pricing
-  translation: Pricing
+- id: partners
+  translation: Partners
 - id: blog
   translation: Blog
 - id: contact

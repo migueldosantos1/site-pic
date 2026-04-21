@@ -5,12 +5,12 @@ about:
   about_item :
   - icon : ti-user # Ícone de utilizador/estudante
     title : Engineer Students
-    content : Somos finalistas de licenciatura no Instituto Superior Técnico (IST). Este projeto nasceu da nossa vontade de aliar os conhecimentos de engenharia e Inteligência Artificial a uma causa com verdadeiro impacto na sociedade.
+    content : We are seniors in the Electrical and Computer Engineering program at the Instituto Superior Técnico (IST). We were assigned this challenge as our final undergraduate project, which we will be working on during this last semester.
 
   - icon : ti-pie-chart # Ícone de estatística/gráfico
-    title : A Realidade em Portugal
-    content : Estima-se que existam cerca de 160.000 pessoas com deficiência visual no nosso país, das quais mais de 25.000 são totalmente cegas. Estes números mostram a urgência de criar soluções tecnológicas de apoio à mobilidade.
+    title : Portugal's Reality
+    content : It is estimated that there are approximately 160,000 people with visual impairments in our country, of whom more than 25,000 are completely blind. These figures highlight the urgent need to develop technological solutions to support mobility.
 
   - icon : ti-target # Ícone de alvo/missão
-    title : O Nosso Objetivo
-    content : O nosso projeto final não é apenas académico. Queremos desenvolver uns óculos inteligentes, confortáveis e acessíveis que promovam a autonomia, a inclusão e a qualidade de vida de quem mais precisa.
+    title : Our Goal
+    content : Our goal with this project is to explore a technological solution for people who are blind or have low vision. We aim to raise awareness of the challenges these individuals face in their daily lives.

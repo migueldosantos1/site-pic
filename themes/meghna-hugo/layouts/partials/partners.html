@@ -1,0 +1,54 @@
+{{ $data := index site.Data site.Language.Lang }}
+{{ if $data.partners.partners.enable }}
+{{ with $data.partners.partners }}
+{{"<!-- Start Partners section -->" | safeHTML}}
+<section id="partners" class="partners section">
+  <div class="container">
+    <div class="row justify-content-center">
+      {{"<!-- section title -->" | safeHTML}}
+      <div class="col-lg-12">
+        <div class="title text-center wow fadeInDown" data-wow-duration="500ms">
+          <h2>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+            {{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h2>
+          <div class="border-meghna"></div>
+        </div>
+      </div>
+      {{"<!-- /section title -->" | safeHTML}}
+    </div>
+
+    {{"<!-- Partners Carousel -->" | safeHTML}}
+    <div class="partners-carousel-wrapper wow fadeInUp" data-wow-duration="600ms">
+      <div class="partners-track">
+        {{"<!-- First set -->" | safeHTML}}
+        {{ range .partners_list }}
+        <div class="partner-item">
+          {{ if .link }}
+          <a href="{{ .link | safeURL }}" target="_blank" rel="noopener" title="{{ .name }}">
+          {{ end }}
+            <img src="{{ .logo | absURL }}" alt="{{ .name }}" loading="lazy" />
+          {{ if .link }}
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+        {{"<!-- Duplicate set for seamless loop -->" | safeHTML}}
+        {{ range .partners_list }}
+        <div class="partner-item" aria-hidden="true">
+          {{ if .link }}
+          <a href="{{ .link | safeURL }}" target="_blank" rel="noopener" tabindex="-1">
+          {{ end }}
+            <img src="{{ .logo | absURL }}" alt="" loading="lazy" />
+          {{ if .link }}
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{"<!-- /Partners Carousel -->" | safeHTML}}
+
+  </div>
+</section>
+{{"<!-- /partners -->" | safeHTML}}
+{{ end }}
+{{ end }}
