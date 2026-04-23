@@ -1,21 +1,28 @@
-##################################### partners ##############################
 partners:
   enable: true
   title: Our Partners
 
   partners_list:
-    - name: Instituto Superior Técnico
-      logo: images/partners/logo_ist.png
-      link: "https://tecnico.ulisboa.pt/"
+  - name: Instituto Superior Técnico
+    logo: images/partners/logo_ist.png
+    link: "https://tecnico.ulisboa.pt/"
 
-    - name: APEC - Associação Promotora do Ensino dos Cegos
-      logo: images/partners/apec.png
-      link: "https://www.apec1888.pt"
+  - name: APEC - Associação Promotora do Ensino dos Cegos
+    logo: images/partners/apec.png
+    link: "https://www.apec1888.pt"
 
-    - name: Bengala Mágica
-      logo: images/partners/bengala-magica.png
-      link: "#"
+  - name: Instituto Superior Técnico
+    logo: images/partners/logo_ist.png
+    link: "https://tecnico.ulisboa.pt/"
 
-    - name: APD
-      logo: images/partners/apd.png
-      link: "#"
+  - name: APEC - Associação Promotora do Ensino dos Cegos
+    logo: images/partners/apec.png
+    link: "https://www.apec1888.pt"
+
+  - name: Instituto Superior Técnico
+    logo: images/partners/logo_ist.png
+    link: "https://tecnico.ulisboa.pt/"
+
+  - name: APEC - Associação Promotora do Ensino dos Cegos
+    logo: images/partners/apec.png
+    link: "https://www.apec1888.pt"

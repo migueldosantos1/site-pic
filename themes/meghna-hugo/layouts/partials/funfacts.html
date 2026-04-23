@@ -3,17 +3,20 @@
 {{ if $data.funfacts.funfacts.enable }}
 {{ with $data.funfacts.funfacts }}
 {{"<!-- Start Counter Section -->" | safeHTML}}
-<section id="counter" class="parallax-section bg-1 section overly" {{ partial `bg-image.html` (dict `Src` .bg_image ) | safeHTMLAttr }}>
+<section id="counter" class="section" style="background-color: #00022e; padding: 80px 0;">
 	<!-- this image is for trigger this section fallback background image -->
-  {{ partial "image" (dict "Src" .bg_image "Alt"
-  .Title "Class" "d-none") }}
+	{{ partial "image" (dict "Src" .bg_image "Alt"
+	.Title "Class" "d-none") }}
 	<div class="container">
 		<div class="row justify-content-center">
 			{{ range .counter_item }}
 			<div class="col-lg-3 col-md-6 col-12 text-center wow fadeInDown" data-wow-duration="500ms">
 				<div class="counters-item">
 					<i class="{{ .icon }}"></i>
-					<span class="count" data-count="{{ .count }}">0</span>
+					<div style="display: inline-flex; align-items: baseline; gap: 2px;">
+						<span class="count" data-count="{{ .count }}">0</span>
+						{{ if .suffix }}<span class="count-suffix">{{ .suffix }}</span>{{ end }}
+					</div>
 					<h3>{{ .title | markdownify }}</h3>
 				</div>
 			</div>

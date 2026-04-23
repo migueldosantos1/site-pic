@@ -772,13 +772,38 @@ a:hover {
 .counters-item {
   padding: 25px 0;
   margin-bottom: 10px;
-  background: #292F36;
+  background: #00022e;           /* era #292F36 */
+  border: 1px solid rgba(215, 186, 137, 0.15);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counters-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(215, 186, 137, 0.2);
+}
+
+.counters-item span.count {
+  display: inline;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 50px;
+  color: #d7ba89;
+}
+
+.count-suffix {
+  display: inline;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 50px;
+  color: #d7ba89;
 }
 
 .counters-item i {
   margin-bottom: 10px;
   font-size: 40px;
   display: inline-block;
+  color: #d7ba89;
 }
 
 .counters-item span {
@@ -786,11 +811,13 @@ a:hover {
   font-weight: bold;
   font-size: 35px;
   line-height: 50px;
+  color: #d7ba89;
 }
 
 .counters-item h3 {
   font-size: 20px;
   margin: 0;
+  color: #ffffff;
 }
 
 /*=================================================================
@@ -844,8 +871,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 160px;
-  height: 90px;
+  width: 230px;
+  height: 150px;
   background: #ffffff;
   border: 1px solid rgba(236, 239, 241, 0.25);
   border-radius: 8px;
@@ -2279,4 +2306,152 @@ figcaption {
 
 .cookie-box-hide {
   display: none;
+}
+
+.post-block,
+.note,
+.post-item .entry {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 2, 46, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.post-block:hover,
+.note:hover,
+.post-item .entry:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 2, 46, 0.12);
+}
+
+.post-block .content,
+.note .excerpt {
+  padding: 20px;
+  background: #ffffff;
+}
+
+.post-block .content h3,
+.note .excerpt h3 {
+  color: #00022e;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.post-block .content h3 a,
+.note .excerpt h3 a,
+.post-excerpt h3 a {
+  color: #00022e !important;
+}
+
+.post-block .content h3 a:hover,
+.note .excerpt h3 a:hover,
+.post-excerpt h3 a:hover {
+  color: #d7ba89 !important;
+}
+
+.post-block .content p,
+.note .excerpt p,
+.post-excerpt p {
+  color: #4B5563;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Post meta bar */
+.post-meta {
+  background-color: #f8f9fa;
+  border-top: 1px solid rgba(0, 2, 46, 0.08);
+  color: #6b717a;
+  font-size: 12px;
+  padding: 8px 20px;
+  margin: 0;
+}
+
+.post-meta a {
+  color: #d7ba89;
+}
+
+.post-meta > span {
+  color: #6b717a;
+  border-right: 1px solid #dee2e6;
+}
+
+/* Read more button */
+.post-excerpt .more a,
+.btn-main {
+  background: #d7ba89;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease;
+}
+
+.post-excerpt .more a:hover {
+  background-color: #00022e !important;
+  color: #fff;
+}
+
+/* "View All Post" button */
+#blog a.btn-main,
+a.btn-main {
+  background: #d7ba89;
+  border: none;
+  border-radius: 6px;
+}
+
+a.btn-main:hover {
+  background: #00022e;
+}
+
+/* Pagination */
+.pagination .page-item .page-link {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #00022e;
+  border-radius: 6px !important;
+  margin-right: 4px;
+}
+
+.pagination .page-item .page-link:hover,
+.pagination .page-item.active .page-link {
+  background: #d7ba89;
+  border-color: #d7ba89;
+  color: #fff;
+}
+
+/* Blog page title */
+.title h2 {
+  color: #00022e !important;
+}
+
+/* Botões Read more do blog */
+.post-block .content a.btn.btn-transparent,
+.btn.btn-transparent {
+  background-color: #d7ba89 !important;
+  border: 1px solid #d7ba89 !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+}
+
+.post-block .content a.btn.btn-transparent:hover,
+.btn.btn-transparent:hover {
+  background-color: #00022e !important;
+  border-color: #00022e !important;
+  color: #ffffff !important;
+}
+
+/* Texto dos cards */
+.post-block .content p,
+.post-block .content h3 a {
+  color: #4B5563 !important;
+}
+
+.post-block .content h3 a:hover {
+  color: #d7ba89 !important;
 }
