@@ -1,6 +1,6 @@
 ---
 title: "Advisor Meeting & Presentation Preparation"
-date: 2026-04-24
+date: 2026-05-02
 image_webp: images/blog/post10.webp
 image: images/blog/post10.jpg
 author: Miguel dos Santos
